@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    min-height: 100%;
+    background-color: #e7e7e7;
+
+}
+nav{
+    display: flex;
+    width: 100%;
+    line-height: 80px;
+    justify-content: space-around;
+    height: 80px;
+    z-index: 111;
+    background-color: #e7e7e7;
+}
+.logo{
+    display: flex;
+    font-size: 40px; 
+    font-weight: 800;
+    color: rgb(32,42,68);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+b{
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+}
+.navItems{
+    display: flex;
+}
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+.navItems li a{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.navItems li:hover a,
+.links a:hover{
+    color: rgb(114, 116, 197);
+}
+.links a{
+    font-size: 30px;
+    color: rgb(32,42,68);
+    margin: 25px 10px;
+}
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height: 400px;
+    background-image: url(img/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg);
+    width: 400px;
+    border-radius: 50%;
+    left: -20%;
+    top: 10%;
+    background: linear-gradient(45deg #7f00ff,pink);
+    animation: object1 6s linear infinite;
+}
+
+.wrapper::after{
+    position: absolute;
+    content: '';
+    background-image: url(img/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner.jpg);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 10%;
+    top: 12%;
+    background: linear-gradient(45deg #7f00ff,pink);
+    animation: object2 6s linear infinite;
+}
+@keyframes object1{
+    50%{
+        left: -13%;
+        top: 41%;
+    }
+}
+
+@keyframes object2{
+    50%{
+        left: 35%;
+        top: 10%;
+    }
+}
+
+.cols{
+    width: 50%;
+}
+
+.cols0{
+    width: 60%;
+    z-index: 5;
+}
+
+.cols1{
+    z-index: 5;
+}
+
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: #000000;
+}
+
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color:#3d535f ;
+}
+
+h1{
+    display: block;
+    font-size: 3em;
+    font-weight: 900;
+    color: #000e16;
+}
+
+.multiText{
+    color: #3d535f;
+    text-transform: capitalize;
+}
+
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+}
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    background-color: #5d8da7;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgb(0, 0, 0);
+}
+button:hover{
+    background-color: #213553;
+}
+
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgbox img{
+    position: relative;
+    height: 100%;
+    width: calc(120% );
+    top : 27px;
+    right : -80px;
+    transform: rotateY(180deg);
+    animation : animateUser 4s linear infinite;
+}
+
+@keyframes animateUser{
+    50%{
+        right: -180px;
+        top: 1px;
+    }
+}
+
+@media screen and (max-widht: 768px){
+    .nav{
+        width: 20%;
+        min-height: 100px;
+    }
+}
